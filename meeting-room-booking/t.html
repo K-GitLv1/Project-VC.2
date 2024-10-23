@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Room Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    select, input[type="datetime-local"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .message {
+      text-align: center;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>จองห้องประชุม</h1>
+
+    <form action="book_room.php" method="POST" id="bookingForm">
+      <label for="room">เลือกห้องประชุม:</label>
+      <select name="room" id="room">
+        <!-- Options จากฐานข้อมูลจะมาแสดงตรงนี้ -->
+        <option value="1">ห้องประชุม 1</option>
+        <option value="2">ห้องประชุม 2</option>
+        <!-- ตัวอย่าง -->
+      </select>
+
+      <label for="start_time">เวลาเริ่มต้น:</label>
+      <input type="datetime-local" name="start_time" id="start_time" required>
+
+      <label for="end_time">เวลาสิ้นสุด:</label>
+      <input type="datetime-local" name="end_time" id="end_time" required>
+
+      <input type="submit" value="จองห้อง">
+    </form>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
