@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'noto-sans-thai', sans-serif;
-    background: linear-gradient(135deg, #e8d7ff, #a995ff);
-}
 
 .login-container {
     width: 350px;
@@ -64,8 +56,6 @@ body {
     outline: none;
 }
 
-
-
 button {
     width: 100%;
     padding: 12px;
@@ -80,7 +70,7 @@ button {
 }
 
 button:hover {
-    background-color: #3b41b9;
+    background-color: #8426db;
 }
 
 .footer {
@@ -96,5 +86,4 @@ button:hover {
 .footer a:hover {
     text-decoration: underline;
 }
-
 
