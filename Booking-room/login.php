@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
     <script src="js/hgtab.js"></script>
+    <script src="js/login.js"></script>
     
 </head>
 <body>
@@ -31,7 +32,16 @@
     </div>
 
     <!-- ส่วน header -->
-    <div class="header">E-Booking</div>
+    <div class="header">
+    <img src="pic/logo.png" alt="Logo" style="width: 60px; height: 60px; margin-right: 10px;">
+    <div>
+        <p class="main-title">Booking</p>
+        <p class="sub-title">ระบบจองห้องประชุม</p>
+    </div>
+</div>
+
+
+
 
     <!-- ส่วน login-container -->
     <div class="login">

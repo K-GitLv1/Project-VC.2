@@ -1,4 +1,4 @@
 module.exports = {
-    php: "C:\\xampp2\\php\\php.exe"
+    php: "C:\\xampp\\php\\php.exe"
   }
-  
+   
