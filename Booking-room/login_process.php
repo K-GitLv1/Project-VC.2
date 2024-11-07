@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $hashedPassword)) {
             // ถ้ารหัสผ่านถูกต้อง
             $_SESSION['username'] = $username;
+            $_SESSION['loggedin'] = true; // ตั้งค่าสถานะการเข้าสู่ระบบ
 
             // แสดง alert ว่ารหัสถูกต้องและเปลี่ยนเส้นทาง
             echo "<script>
