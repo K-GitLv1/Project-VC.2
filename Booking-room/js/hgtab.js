@@ -20,3 +20,20 @@ document.addEventListener('click', function(event) {
         sidebar.style.left = "-250px"; // ปิด sidebar
     }
 });
+// ทำให้เมนู dropdown เปิด/ปิดเมื่อคลิก
+document.querySelectorAll('.dropdown-toggle').forEach(function(dropdownToggle) {
+    dropdownToggle.addEventListener('click', function(event) {
+        var dropdown = this.closest('.dropdown');
+        dropdown.classList.toggle('open');  // เปิดหรือปิดเมนู dropdown
+        event.stopPropagation();  // หยุดการแพร่กระจายของคลิก
+    });
+});
+
+// ปิดเมนู dropdown เมื่อคลิกที่ส่วนอื่นของหน้า
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.open').forEach(function(dropdown) {
+            dropdown.classList.remove('open');
+        });
+    }
+});

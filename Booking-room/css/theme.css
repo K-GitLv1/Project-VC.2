@@ -1,4 +1,5 @@
-body {
+/* Styles for body */
+body { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +11,8 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-/* สไตล์สำหรับ .header */
+
+/* Header styles */
 .header {
     width: 100%;
     background-color: #4e54c8;
@@ -37,7 +39,6 @@ body {
     margin: 0;
 }
 
-
 /* Hamburger menu icon */
 .menu-icon {
     position: fixed;
@@ -54,7 +55,8 @@ body {
     margin: 6px 0;
     transition: 0.4s;
 }
-/* Sidebar menu */
+
+/* Sidebar styles */
 .sidebar {
     height: 100%;
     width: 250px;
@@ -63,11 +65,13 @@ body {
     left: -250px;
     background-color: #4e54c8;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
     z-index: 1100; /* ให้อยู่เหนือ header */
-    color: white; /*สีปุ่ม X*/
+    color: white;
+
 }
+
 
 .sidebar a {
     padding: 10px 20px;
@@ -82,7 +86,7 @@ body {
     background-color: #3b41b9;
 }
 
-/* เพิ่มการตั้งค่าให้ .close-btn ให้มีเลเยอร์ด้านหน้าสุด */
+/* Close button for the sidebar */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -90,8 +94,7 @@ body {
     font-size: 36px;
     cursor: pointer;
     z-index: 1200; /* เพิ่มเลเยอร์ให้อยู่ด้านหน้าสุด */
-    }
-
+}
 /* ทำให้เนื้อหาด้านล่างไม่ซ้อนกับ .header */
 .login-container {
     margin-top: 100px; /* ระยะห่างจาก .header */
@@ -107,4 +110,55 @@ body {
 .user-profile p {
     font-size: 14px;
     font-weight: bold;
+}
+/* สไตล์สำหรับ dropdown */
+.dropdown-content {
+    display: block; /* แสดงเมนู dropdown ให้เป็นค่าเริ่มต้น */
+    position: relative;
+    background-color: #3a43ec;
+    max-height: 0; /* เริ่มต้นที่ 0 เพื่อซ่อนเมนู */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    transition: max-height 0.3s ease-out; /* เพิ่ม transition เพื่อทำให้เมนูเลื่อนขึ้น/ลงอย่างราบรื่น */
+}
+
+.dropdown.open .dropdown-content {
+    max-height: 200px; /* เมื่อเปิดเมนู ให้ขยายความสูงเป็นขนาดที่ต้องการ */
+}
+
+.dropdown a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+}
+
+/* เมื่อ hover ที่ลิงก์ใน dropdown */
+.dropdown a:hover {
+    background-color: #3b41b9;
+}
+/* ปรับการแสดงผลของลูกศร */
+.arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* เมื่อ dropdown ถูกเปิด ลูกศรจะหมุนขึ้น */
+.dropdown.open .arrow {
+    transform: rotate(180deg); /* หมุนลูกศร 180 องศา */
+}
+.container {
+    margin-bottom: 80px; /* เพิ่มระยะห่างระหว่างฟอร์มและ footer */
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
 }

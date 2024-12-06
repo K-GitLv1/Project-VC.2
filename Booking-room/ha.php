@@ -21,11 +21,27 @@
     <a href="index.php">หน้าหลัก</a>
     <a href="bk.php">จองห้อง</a>
     <a href="">เกี่ยวกับ</a>
+
+    <?php if (isset($_SESSION['username']) && $_SESSION['username'] == 'admin'): ?>
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle">ตั้งค่า 
+            <span class="arrow">&#9660;</span> <!-- ลูกศรชี้ลง -->
+        </a>
+        <div class="dropdown-content">
+            <a href="manage_rooms.php">จองห้อง</a>
+            <a href="#">อุปกรณ์</a>
+            <a href="edit_profile.php">ผู้ใช้</a>
+        </div>
+    </div>
+<?php endif; ?>
+
+
+    
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php if (isset($_SESSION['username'])): ?>
     <div class="user-profile" style="margin-bottom: 20px;">
         <!-- เพิ่มลิงก์ไปที่หน้า edit_profile.php -->
-        <a href="edit_profile.php">
+        
             <!-- ตรวจสอบว่า $_SESSION['profile_pic'] มีค่าหรือไม่ ถ้าไม่มีให้ใช้ pic/defpro.jpg -->
             <img src="<?php echo !empty($_SESSION['profile_pic']) ? $_SESSION['profile_pic'] : 'pic/defpro.jpg'; ?>" 
                  alt="User Profile" 
@@ -41,3 +57,4 @@
     <br>
     <a href="logout.php?redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>">ออกจากระบบ</a> <!-- ลิงก์ออกจากระบบพร้อม redirect -->
 </div>
+<script src="js/hgtab.js"></script>

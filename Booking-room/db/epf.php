@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:host=127.0.0.1;dbname=e_booking;charset=utf8mb4';
+$dsn = 'mysql:host=127.0.0.1;dbname=bkx2;charset=utf8mb4';
 $username = 'root'; // เปลี่ยนเป็นชื่อผู้ใช้ของคุณ
 $password = ''; // เปลี่ยนเป็นรหัสผ่านของคุณ
 

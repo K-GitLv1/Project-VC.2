@@ -63,16 +63,17 @@ if (!$profile) {
 <head>
 
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/epf.css">
+    <!-- <link rel="stylesheet" href="css/epf.css"> -->
     
-    <script src="js/hgtab.js"></script>
     <meta charset="UTF-8">
     <title>แก้ไขโปรไฟล์</title>
 
 
 </head>
 <body>
-
+<?php 
+    include 'check_login.php';
+  ?>
 
 
     
@@ -91,7 +92,7 @@ if (!$profile) {
             <label>ชื่อ:</label>
             <input type="text" name="first_name" value="<?= htmlspecialchars($profile['first_name']) ?>" required>
         </div>
-        
+    
         <div class="input-group">
             <label>นามสกุล:</label>
             <input type="text" name="last_name" value="<?= htmlspecialchars($profile['last_name']) ?>" required>

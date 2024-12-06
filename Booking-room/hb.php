@@ -22,3 +22,4 @@
     <a href="">เกี่ยวกับ</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <a href="login.php">เข้าสู่ระบบ</a>
 </div>
+<script src="js/hgtab.js"></script>

@@ -106,6 +106,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
+<?php 
+    include 'check_login.php';
+?>
     <div class="container">
         <h2>เพิ่มผู้ใช้ใหม่</h2>
         <form action="add_user.php" method="post">

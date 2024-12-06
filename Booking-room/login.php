@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เข้าสู่ระบบ</title>
-    <link rel="stylesheet" href="css/login2.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/login2.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-    <script src="js/hgtab.js"></script>
+    
     <script src="js/login.js"></script>
 </head>
 <body>
-
 <?php 
     include 'check_login.php';
 ?>
+
 
     <!-- ส่วน login-container -->
     <div class="login">
@@ -38,6 +39,9 @@
             
         </div>
     </div>
-    
+    <!-- Footer -->
+    <footer>
+        <p>ProjectVC.2 2024 | E-Booking System</p>
+    </footer>
 </body>
 </html>
